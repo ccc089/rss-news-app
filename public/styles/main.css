@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #254525 0%, #5a7d5a 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-top: 2.5rem;
+    letter-spacing: 2px;
+    font-size: 2.5em;
+    text-shadow: 0 4px 24px rgba(37, 69, 37, 0.25);
+    font-weight: 700;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    margin: 0.5em auto 0 auto;
+    width: 80px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #b7ff50 0%, #254525 100%);
+}
+
+#news {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1rem;
+}
+
+.noticia {
+    background: rgba(255,255,255,0.97);
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(37, 69, 37, 0.13);
+    margin-bottom: 2.2rem;
+    padding: 2rem 2rem 1.5rem 2rem;
+    transition: transform 0.18s, box-shadow 0.18s;
+    position: relative;
+    overflow: hidden;
+    border-left: 8px solid #254525;
+    border-right: 8px solid #b7ff50;
+}
+
+.noticia:hover {
+    transform: translateY(-6px) scale(1.015);
+    box-shadow: 0 12px 40px rgba(37, 69, 37, 0.22);
+    background: linear-gradient(90deg, #e0ffe0 0%, #f6fff2 100%);
+}
+
+.noticia h2 {
+    margin: 0 0 0.5em 0;
+    font-size: 1.5em;
+    color: #254525;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.noticia h2 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s, border-bottom 0.2s;
+    border-bottom: 2px solid #b7ff50;
+    padding-bottom: 2px;
+}
+
+.noticia h2 a:hover {
+    color: #254525; /* Verde terciopelo sólido */
+    border-bottom: 2px solid #254525;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+}
+
+.noticia p {
+    color: #254525;
+    margin: 0.5em 0 1em 0;
+    line-height: 1.7;
+    font-size: 1.08em;
+}
+
+.noticia small {
+    color: #5a7d5a;
+    font-size: 0.98em;
+    display: block;
+    margin-bottom: 0.5em;
+    font-style: italic;
+}
+
+.noticia hr {
+    border: none;
+    border-top: 1.5px dashed #b7ff50;
+    margin: 1.5em 0 0 0;
+}
+
+@media (max-width: 700px) {
+    #news {
+        padding: 0 0.5rem;
+    }
+    .noticia {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+}
